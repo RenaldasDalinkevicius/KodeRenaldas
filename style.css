@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    background:#000000;
+}
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+}
+.canvas {
+    background-image: url(developer.jpeg),linear-gradient(45deg,rgb(20, 20, 20), rgb(90, 90, 90));
+    background-blend-mode:overlay;
+    background-position: center;
+    background-size: cover;
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 2em;
+}
+.container_flex {
+    display: flex;
+    justify-content: space-between;
+}
+main {
+    background: #000000;
+    color: #ffff;
+}
+.splitter {
+    display: flex;
+}
+.about_me, .current_progress {
+    padding: 3.25em 0;
+    width: 50%;
+    min-height: 100vh;
+}
+.current_progress {
+    flex-direction: column;
+}
+
+/* Buttons */
+
+.scroll_down_btn {
+    display: inline-block;
+    font-weight: 900;
+    text-align: center;
+    color:#fff
+}
+
+/* Navigaiton */
+
+.nav_bar {
+    align-items: baseline;
+    /*background: #303030;*/
+    padding: 0;
+}
+.nav_bar div {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+nav a, .site_title {
+    font-weight: 700;
+    padding: 0 .25em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+nav a {
+    text-decoration: none;
+    color: #ffff;
+}
+nav a:hover, nav a:focus {
+    color: #99D930;
+}
+.current_page {
+    border-bottom: 1px solid #ffff;
+}
+.current_page:hover {
+    color: inherit;
+}
+
+/* Typography */
+
+p {
+    font-size: 1.25rem;
+}
+h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    font-weight: 300;
+    /*border-top: solid 1px #fff;*/
+    border-bottom: solid 1px #fff;
+    color: #ffff;
+}
+h5 {
+    color: rgb(50, 50, 50);
+    font-size: 1rem;
+}
+.accent_text {
+    display: block;
+    color: #99D930;
+    font-weight: 700;
+}
+h1 .accent_text {
+    font-size: 5rem;
+    color: #99D930;
+    font-weight: bold;
+}
+h2 .accent_text {
+    font-size: 3.75rem;
+}
+.site_title {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* About me */
+
+nav li {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.inverse {
+    /*background: #252525;*/
+    color: #99D930;
+}
+.inverse .accent_text {
+    color: #99D930
+}
+.current_progress_flex {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.current_progress_graph {
+    height: 7%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .current_progress_graph {
+        transition-duration: 4s;
+    }
+}
+.current_progress_graph_html,
+.current_progress_graph_css,
+.current_progress_graph_javascript,
+.current_progress_graph_python {
+    background: #99D930;
+    color:#000000;
+    transition-timing-function: ease;
+}
+.current_progress_graph_html {
+    width:82%
+}
+.current_progress_graph_css {
+    width:79%
+}
+.current_progress_graph_javascript {
+    width:63%
+}
+.current_progress_graph_python {
+    width:59%
+}
+/*
+.left_align {
+    text-align: left;
+    padding-left: 7%;
+}
+.right_align {
+    text-align: right;
+    padding-right: 7%;
+}
+*/
+
+/* Media Queries */
+
+@media (max-width:650px) {
+    .nav_bar {
+        font-size: 2rem;
+        background: #303030;
+    }
+    .nav_bar, .nav_bar nav {
+        display: block;
+    }
+    /* Put this in its own css */
+    ul li:nth-child(1) {
+        background: #99D930;
+    }
+    ul li:nth-child(1) a {
+        color: #000000;
+    }
+    .current_page {
+        border-bottom: 0;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+    .splitter {
+        flex-direction: column;
+    }
+    .about_me, .current_progress {
+        width: 100%;
+    }
+    .current_progress_graph {
+        margin: 1rem 0;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li, .nav_bar div {
+        margin: 0;
+        text-align: center;
+    }
+    h1 .accent_text{
+        font-size: 4rem;
+    }
+}
+@media (max-width:360px) {
+    .container {
+        padding:0
+    }
+    h1 .accent_text {
+        font-size: 3.5rem;
+    }
+    h2 .accent_text {
+        font-size: 3.5rem;
+    }
+}
+@media (max-width:256px) {
+    h1 .accent_text {
+        font-size: 3rem;
+    }
+    h2 .accent_text {
+        font-size: 2.5rem;
+    }
+}
+/* % Fade in % */
+
+/* fade in HTML */
+@property --num_html {
+    syntax: "<integer>";
+    initial-value: 82;
+    inherits: false;
+}
+.graph_html_counter {
+    animation: counter_html 4s ease;
+    counter-reset: num_html var(--num_html);
+}
+.graph_html_counter:after {
+    content: counter(num_html) "%";
+}
+@keyframes counter_html {
+    from {
+        --num_html: 20;
+    }
+    to {
+        --num_html: 82;
+    }
+}
+/* fade in CSS */
+@property --num_css {
+    syntax: "<integer>";
+    initial-value: 79;
+    inherits: false;
+}
+.graph_css_counter {
+    animation: counter_css 4s ease;
+    counter-reset: num_css var(--num_css);
+}
+.graph_css_counter:after {
+    content: counter(num_css) "%";
+}
+@keyframes counter_css {
+    from {
+        --num_css: 20;
+    }
+    to {
+        --num_css: 79;
+    }
+}
+/* fade in javascript */
+@property --num_javascript {
+    syntax: "<integer>";
+    initial-value: 63;
+    inherits: false;
+}
+.graph_javascript_counter {
+    animation: counter_javascript 4s ease;
+    counter-reset: num_javascript var(--num_javascript);
+}
+.graph_javascript_counter:after {
+    content: counter(num_javascript) "%";
+}
+@keyframes counter_javascript {
+    from {
+        --num_javascript: 20;
+    }
+    to {
+        --num_javascript: 63;
+    }
+}
+/* fade in python */
+@property --num_python {
+    syntax: "<integer>";
+    initial-value: 59;
+    inherits: false;
+}
+.graph_python_counter {
+    animation: counter_python 4s ease;
+    counter-reset: num_python var(--num_python);
+}
+.graph_python_counter:after {
+    content: counter(num_python) "%";
+}
+@keyframes counter_python {
+    from {
+        --num_python: 20;
+    }
+    to {
+        --num_python: 59;
+    }
+}

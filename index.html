@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="canvas">
+    <header class="container_flex" id="header">
+        <div class="nav_bar container_flex">
+            <nav class="container_flex">
+                <ul>
+                    <li><a href="" class="current_page">Home</a></li>
+                    <li><a href="">Github</a></li>
+                    <li><a href="">Template</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h3 class="site_title">Portfolio</h3>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Hello, and welcome to my website<span class="accent_text">Portfolio</span></h1>
+        </div>
+        <div class="container"> <!--SCROLL DOWN NOTIFICATION/ BUTTON?-->
+            <h1 href="#" class="scroll_down_btn">⤋ Scroll down ⤋</h1>
+        </div>
+    </header>
+    </div>
+    <main>
+        <div class="splitter">
+            <section class="about_me">
+                <div class="container">
+                    <h2>I am a <span class="accent_text">Developer</span></h2>
+                    <p>Well, kinda. I am a student, i am currently taking a course, where i learn HTML, CSS, JavaScript and Python.<br>And it is <strong>exiting </strong>,i always wanted to learn myself some programming languages, just because i though that it was really cool and interesting, but i never had the time or effort to actually learn it.</p>
+                    <h1>How i started</h1>
+                    <p>At the time i really did not have any direction, i was unsure if i should study, or continue working, and then i got an offer to start taking programming courses at Jobloop, at first i was unsure, because i was never good at design, and making a website is all about the design.</p>
+                    <p>But i thought why not, and gave it a shot, and immediately got hooked, i all of the sudden knew what i wanted to work as. I wanted work as a <strong>developer</strong>, programming is so much fun, there are so many different languages, it honestly is mind-blowing.</p>
+                    <h1>Making progress</h1>
+                    <p>I am making good progress, there are just so many things to learn that sometimes it gets overwhelming, but thats part of the fun, learning new things.</p>
+                    <p>Even when making this website, i learned so many new things, and there are so many more things that i want to learn, i am really exited for the future, and becoming a full-time <strong>Developer</strong></p>
+                    <h5>This website is fully responsive, and works on all phones, well there are some small phones where it might be a little off</h5>
+                </div>
+            </section>
+            <section class="current_progress inverse">
+                <div class="container container_flex current_progress_flex">
+                    <h2>My current <span class="accent_text">Progress</span></h2>
+                    <div class="current_progress_graph container_flex current_progress_graph_html" id="graph_html"><h4>HTML<h4 class="graph_html_counter"></h4></h4></div>
+                    <div class="current_progress_graph container_flex current_progress_graph_css" id="graph_css"><h4>CSS<h4 class="graph_css_counter"></h4></h4></div>
+                    <div class="current_progress_graph container_flex current_progress_graph_javascript" id="graph_javascript"><h4>JavaScript</h4><h4 class="graph_javascript_counter"></h4></div>
+                    <div class="current_progress_graph container_flex current_progress_graph_python" id="graph_python"><h4>Python<h4 class="graph_python_counter"></h4></h4></div>
+                    <h4 class="container_flex"><span>0%</span><span>100%</span></h4>
+                </div>
+            </section>
+        </div>
+        <script src="index.js" defer></script>
+    </main>
 </body>
 </html>
