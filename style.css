@@ -82,7 +82,7 @@ nav a {
     text-decoration: none;
     color: #ffff;
 }
-nav a:hover, nav a:focus {
+nav li a:hover, nav li a:focus {
     color: #99D930;
 }
 .current_page {
@@ -91,7 +91,9 @@ nav a:hover, nav a:focus {
 .current_page:hover {
     color: inherit;
 }
-
+.nav_bar_interactive {
+    display: none;
+}
 /* Typography */
 
 p {
@@ -135,9 +137,10 @@ h2 .accent_text {
 
 /* About me */
 
-nav li {
-    margin-left: 2em;
-    margin-right: 2em;
+nav li a {
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 .inverse {
     /*background: #252525;*/
@@ -196,20 +199,54 @@ nav li {
 /* Media Queries */
 
 @media (max-width:650px) {
-    .nav_bar {
-        font-size: 2rem;
-        background: #303030;
+    nav ul li, .nav_bar_interactive {
+        padding: 0.25em 0.25em;
     }
-    .nav_bar, .nav_bar nav {
+    nav li a,
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+    nav li a{
         display: block;
     }
-    /* Put this in its own css */
+    .hide_navbar {
+        display: none;
+    }
+    .site_title {
+        display: none;
+    }
+    .nav_bar_interactive {
+        display: block;
+        order: -1;
+    }
+    .nav_bar_interactive_clr {
+        background: #99D930;
+        color: #000000;
+    }
+    .nav_bar {
+        font-size: 2rem;
+        padding: 0.25rem 0;
+        display: block;
+    }
+    .nav_bar nav {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+
+    }
+    .nav_bar {
+        background: #303030;
+    }
+/*
     ul li:nth-child(1) {
         background: #99D930;
     }
     ul li:nth-child(1) a {
         color: #000000;
     }
+*/
     .current_page {
         border-bottom: 0;
     }
@@ -224,13 +261,6 @@ nav li {
     }
     .current_progress_graph {
         margin: 1rem 0;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav li, .nav_bar div {
-        margin: 0;
-        text-align: center;
     }
     h1 .accent_text{
         font-size: 4rem;

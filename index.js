@@ -7,7 +7,8 @@ const progress_transition_html_counter = document.querySelector(".graph_html_cou
 const progress_transition_css_counter = document.querySelector(".graph_css_counter")
 const progress_transition_javascript_counter = document.querySelector(".graph_javascript_counter")
 const progress_transition_python_counter = document.querySelector(".graph_python_counter")
-
+const nav_bar_list = document.querySelectorAll(".nav_bar_list")
+const nav_bar_interactive_clr = document.querySelector(".nav_bar_interactive")
 //Removing the animation/effect
 progress_transition_html.classList.remove("current_progress_graph_html")
 progress_transition_css.classList.remove("current_progress_graph_css")
@@ -100,8 +101,22 @@ function scrollHandler() {
 }
 window.addEventListener("scroll", scrollHandler)
 
+/* Hide and show navbar */
+
+function responsiveNavBar() {
+  nav_bar_interactive_clr.classList.add("nav_bar_interactive_clr")
+  for (let i = 0; i< nav_bar_list.length; i++) {
+    if (nav_bar_list[i].className==="nav_bar_list hide_navbar") {
+      nav_bar_list[i].classList.remove("hide_navbar")
+    }
+    else {
+      nav_bar_list[i].classList.add("hide_navbar")
+      nav_bar_interactive_clr.classList.remove("nav_bar_interactive_clr")
+    }
+  }
+}
 /////////////////////////////////////////////////////////////////
-/*  THIS IS FOR THE WHOLE DIV  (current_progress div)          */
+/*      THIS IS FOR THE WHOLE DIV  (current_progress div)      */
 /////////////////////////////////////////////////////////////////
 /*
 progress_transition_html.classList.remove("current_progress_graph_html")
