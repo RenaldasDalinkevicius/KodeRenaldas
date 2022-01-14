@@ -7,7 +7,7 @@ body {
     margin: 0;
     background:#000000;
 }
-header {
+#header {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,20 +15,31 @@ header {
     color: #fff;
 }
 .canvas {
-    background-image: url(developer.jpeg),linear-gradient(45deg,rgb(20, 20, 20), rgb(90, 90, 90));
+    background-image: url(img/developer.jpeg),linear-gradient(45deg,rgb(20, 20, 20), rgb(90, 90, 90));
     background-blend-mode:overlay;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
+.section_img img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
 .container {
     margin: 0 auto;
     max-width: 900px;
-    padding: 0 2em;
+    padding: 3.25em 2em;
 }
 .container_flex {
     display: flex;
     justify-content: space-between;
+}
+.section_img, .github_section {
+    max-width: 500px;
+}
+.section_img {
+    height: 500px;
 }
 main {
     background: #000000;
@@ -37,24 +48,30 @@ main {
 .splitter {
     display: flex;
 }
-.about_me, .current_progress {
-    padding: 3.25em 0;
-    width: 50%;
+.full_screen {
     min-height: 100vh;
 }
-.current_progress {
-    flex-direction: column;
+.width50 {
+    width: 50%;
 }
 
 /* Buttons */
 
-.scroll_down_btn {
-    display: inline-block;
+.scroll_down_btn, .btn {
     font-weight: 900;
     text-align: center;
+}
+.scroll_down_btn {
     color:#fff
 }
-
+.btn {
+    display: block;
+    padding: 1em 2em;
+    margin: 1em 0;
+    background-color: #99D930;
+    color: #000000;
+    text-decoration: none;
+}
 /* Navigaiton */
 
 .nav_bar {
@@ -90,11 +107,12 @@ nav li a:hover, nav li a:focus {
     border-bottom: 1px solid #ffff;
 }
 .current_page:hover {
-    color: inherit;
+    color: #ffff;
 }
 .nav_bar_interactive {
     display: none;
 }
+
 /* Typography */
 
 p {
@@ -114,6 +132,12 @@ h2 {
     border-bottom: solid 1px #fff;
     color: #ffff;
 }
+.github_header {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #99D930;
+}
 h5 {
     color: rgb(50, 50, 50);
     font-size: 1rem;
@@ -132,16 +156,17 @@ h2 .accent_text {
     font-size: 3.75rem;
 }
 .site_title {
+    color: #fff;
     font-size: 1.25rem;
     margin: 0;
 }
-
-/* About me */
-
 nav li a {
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
+}
+.section_text {
+    margin-right: 2em;
 }
 .inverse {
     /*background: #252525;*/
@@ -197,6 +222,52 @@ nav li a {
 }
 */
 
+/* Footer */
+
+footer {
+    position: absolute;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    color: #fff;
+    padding: 2em 0;
+}
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer_content h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+}
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.socials li {
+    margin: 0 2rem;
+}
+.socials a {
+    text-decoration: none;
+    padding: 0.5rem;
+}
+.socials a i {
+    font-size: 2rem;
+    color: #99D930;
+    transition: black .4s ease;
+}
+.socials a i:hover {
+    color: #99D930;
+}
 /* Media Queries */
 
 @media (max-width:650px) {
@@ -240,6 +311,9 @@ nav li a {
     .nav_bar {
         background: #303030;
     }
+    .github_header {
+        margin: 1.5em 0;
+    }
 /*
     ul li:nth-child(1) {
         background: #99D930;
@@ -257,7 +331,7 @@ nav li a {
     .splitter {
         flex-direction: column;
     }
-    .about_me, .current_progress {
+    .full_screen {
         width: 100%;
     }
     .current_progress_graph {
@@ -277,6 +351,12 @@ nav li a {
     h2 .accent_text {
         font-size: 3.5rem;
     }
+    .github_header {
+        margin: 1em 0;
+    }
+    .socials li {
+        margin: 0 1rem;
+    }
 }
 @media (max-width:256px) {
     h1 .accent_text {
@@ -284,6 +364,9 @@ nav li a {
     }
     h2 .accent_text {
         font-size: 2.5rem;
+    }
+    .footer_content h3 {
+        letter-spacing: 0.5rem;
     }
 }
 /* % Fade in % */
