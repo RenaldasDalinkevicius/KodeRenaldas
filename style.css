@@ -371,6 +371,13 @@ footer {
 }
 /* % Fade in % */
 
+:root {
+    --num_python: 59;
+    --num_html: 82;
+    --num_css: 79;
+    --num_javascript: 63;
+}
+
 /* fade in HTML */
 @property --num_html {
     syntax: "<integer>";
@@ -379,6 +386,8 @@ footer {
 }
 .graph_html_counter {
     animation: counter_html 4s ease;
+    -webkit-animation: counter_html 4s ease;
+    -moz-animation: counter_html 4s ease;
     counter-reset: num_html var(--num_html);
 }
 .graph_html_counter:after {
@@ -392,6 +401,22 @@ footer {
         --num_html: 82;
     }
 }
+@-moz-keyframes counter_html {
+    from {
+        --num_html: 20;
+    }
+    to {
+        --num_html: 82;
+    }
+}
+@-webkit-keyframes counter_html {
+    from {
+        --num_html: 20;
+    }
+    to {
+        --num_html: 82;   
+    }
+}
 /* fade in CSS */
 @property --num_css {
     syntax: "<integer>";
@@ -400,6 +425,8 @@ footer {
 }
 .graph_css_counter {
     animation: counter_css 4s ease;
+    -webkit-animation: counter_css 4s ease;
+    -moz-animation: counter_css 4s ease;
     counter-reset: num_css var(--num_css);
 }
 .graph_css_counter:after {
@@ -413,6 +440,22 @@ footer {
         --num_css: 79;
     }
 }
+@-moz-keyframes counter_css {
+    from {
+        --num_css: 20;
+    }
+    to {
+        --num_css: 79;
+    }
+}
+@-webkit-keyframes counter_css {
+    from {
+        --num_css: 20;
+    }
+    to {
+        --num_css: 79;   
+    }
+}
 /* fade in javascript */
 @property --num_javascript {
     syntax: "<integer>";
@@ -421,6 +464,8 @@ footer {
 }
 .graph_javascript_counter {
     animation: counter_javascript 4s ease;
+    -webkit-animation: counter_javascript 4s ease;
+    -moz-animation: counter_javascript 4s ease;
     counter-reset: num_javascript var(--num_javascript);
 }
 .graph_javascript_counter:after {
@@ -434,14 +479,33 @@ footer {
         --num_javascript: 63;
     }
 }
+@-moz-keyframes counter_javascript {
+    from {
+        --num_javascript: 20;
+    }
+    to {
+        --num_javascript: 63;
+    }
+}
+@-webkit-keyframes counter_javascript {
+    from {
+        --num_javascript: 20;
+    }
+    to {
+        --num_javascript: 63;   
+    }
+}
 /* fade in python */
 @property --num_python {
     syntax: "<integer>";
     initial-value: 59;
     inherits: false;
 }
+
 .graph_python_counter {
     animation: counter_python 4s ease;
+    -webkit-animation: counter_python 4s ease;
+    -moz-animation: counter_python 4s ease;
     counter-reset: num_python var(--num_python);
 }
 .graph_python_counter:after {
@@ -453,5 +517,21 @@ footer {
     }
     to {
         --num_python: 59;
+    }
+}
+@-moz-keyframes counter_python {
+    from {
+        --num_python: 20;
+    }
+    to {
+        --num_python: 59;
+    }
+}
+@-webkit-keyframes counter_python {
+    from {
+        --num_python: 20;
+    }
+    to {
+        --num_python: 59;   
     }
 }
