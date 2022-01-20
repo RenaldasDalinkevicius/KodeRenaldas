@@ -384,6 +384,10 @@ footer {
     initial-value: 82;
     inherits: false;
 }
+.graph_html_counter::before {
+    content: " ";
+    white-space: pre;
+}
 .graph_html_counter {
     animation: counter_html 4s ease;
     -webkit-animation: counter_html 4s ease;
@@ -422,6 +426,10 @@ footer {
     syntax: "<integer>";
     initial-value: 79;
     inherits: false;
+}
+.graph_css_counter::before {
+    content: " ";
+    white-space: pre;
 }
 .graph_css_counter {
     animation: counter_css 4s ease;
@@ -462,6 +470,10 @@ footer {
     initial-value: 63;
     inherits: false;
 }
+.graph_javascript_counter::before {
+    content: " ";
+    white-space: pre;
+}
 .graph_javascript_counter {
     animation: counter_javascript 4s ease;
     -webkit-animation: counter_javascript 4s ease;
@@ -501,7 +513,10 @@ footer {
     initial-value: 59;
     inherits: false;
 }
-
+.graph_python_counter::before {
+    content: " ";
+    white-space: pre;
+}
 .graph_python_counter {
     animation: counter_python 4s ease;
     -webkit-animation: counter_python 4s ease;
