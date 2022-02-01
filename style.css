@@ -6,22 +6,30 @@
     --num_html: 82;
     --num_css: 79;
     --num_javascript: 63;
+    --clr_dark: #000000;
+    --clr_dark_dark: #202020;
+    --clr_dark_light: #909090;
+    --clr_accent: #99D930;
+    --clr_light: #ffff;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     margin: 0;
-    background:#000000;
+    background: var(--clr_dark)
 }
 #header {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #fff;
+    color: var(--clr_light)
 }
 .canvas {
-    background-image: url(img/developer.jpeg),linear-gradient(45deg,rgb(20, 20, 20), rgb(90, 90, 90));
+    background-image: url(img/developer.jpeg),linear-gradient(45deg, var(--clr_dark_dark), var(--clr_dark_light));
     background-blend-mode:overlay;
     background-position: center;
     background-size: cover;
@@ -48,8 +56,8 @@ body {
     height: 500px;
 }
 main {
-    background: #000000;
-    color: #ffff;
+    background: var(--clr_dark);
+    color: var(--clr_light);
 }
 .splitter {
     display: flex;
@@ -68,14 +76,14 @@ main {
     text-align: center;
 }
 .scroll_down_btn {
-    color:#fff
+    color: var(--clr_light)
 }
 .btn {
     display: block;
     padding: 1em 2em;
     margin: 1em 0;
-    background-color: #99D930;
-    color: #000000;
+    background-color: var(--clr_accent);
+    color: var(--clr_dark);
     text-decoration: none;
     transition: transform 200ms ease-in-out;
 }
@@ -83,7 +91,7 @@ main {
     transform: scale(1.1);
 }
 :focus {
-    outline: 3px solid #99D930;
+    outline: 3px solid var(--clr_accent);
     outline-offset: 3px;
 }
 /* Navigaiton */
@@ -112,16 +120,16 @@ nav a, .site_title {
 }
 nav a {
     text-decoration: none;
-    color: #ffff;
+    color: var(--clr_light)
 }
 nav li a:hover, nav li a:focus {
-    color: #99D930;
+    color: var(--clr_accent)
 }
 .current_page {
     border-bottom: 1px solid #ffff;
 }
 .current_page:hover {
-    color: #ffff;
+    color: var(--clr_light)
 }
 .nav_bar_interactive {
     display: none;
@@ -143,34 +151,34 @@ p {
     margin-top: 0;
     font-weight: 300;
     /*border-top: solid 1px #fff;*/
-    border-bottom: solid 1px #fff;
-    color: #ffff;
+    border-bottom: solid 1px var(--clr_light);
+    color: var(--clr_light);
 }
 .github_header {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #99D930;
+    color: var(--clr_accent);
 }
 h5 {
-    color: rgb(50, 50, 50);
+    color: var(--clr_dark_dark);
     font-size: 1rem;
 }
 .accent_text {
     display: block;
-    color: #99D930;
+    color: var(--clr_accent);
     font-weight: 700;
 }
 h1 .accent_text {
     font-size: 5rem;
-    color: #99D930;
+    color: var(--clr_accent);
     font-weight: bold;
 }
 .section_title .accent_text {
     font-size: 3.75rem;
 }
 .site_title {
-    color: #fff;
+    color: var(--clr_light);
     font-size: 1.25rem;
     margin: 0;
 }
@@ -184,10 +192,10 @@ nav li a {
 }
 .inverse {
     /*background: #252525;*/
-    color: #99D930;
+    color: var(--clr_accent);
 }
 .inverse .accent_text {
-    color: #99D930
+    color: var(--clr_accent);
 }
 .current_progress_flex {
     flex-direction: column;
@@ -209,8 +217,8 @@ nav li a {
 .current_progress_graph_css,
 .current_progress_graph_javascript,
 .current_progress_graph_python {
-    background: #99D930;
-    color:#000000;
+    background: var(--clr_accent);
+    color: var(--clr_dark);
     transition-timing-function: ease;
 }
 .current_progress_graph_html {
@@ -235,10 +243,10 @@ nav li a {
     grid-template-columns: repeat(2, 50%);
 }
 .cv_grid > div {
-    background-color:#0f0f0f;
+    background-color: var(--clr_dark_dark);
     padding: 1em;
     margin: 1em;
-    border-bottom: 5px solid #99D930;
+    border-bottom: 5px solid var(--clr_accent);
 }
 .cv_grid h3{
     font-weight: 600;
@@ -269,7 +277,7 @@ nav li a {
     font-size: 1.125rem;
     margin: 0.25em 0;
     text-decoration: none;
-    color: #fff;
+    color: var(--clr_light);
 }
 .info_contact a i {
     margin-right: 0.25em;
@@ -306,14 +314,24 @@ nav li a {
     display: flex;
     justify-content: space-between;
 }
+
+/* GITHUB */
+
+.github_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-gap: 1em;
+    justify-content: center;
+}
+
 /* Footer */
 
 footer {
     position: absolute;
-    background: #111;
+    background: var(--clr_dark_dark);
     height: auto;
     width: 100%;
-    color: #fff;
+    color: var(--clr_light);
     padding: 2em 0;
     overflow-y: hidden;
 }
@@ -347,11 +365,11 @@ footer {
 }
 .socials a i {
     font-size: 2rem;
-    color: #99D930;
-    transition: black .4s ease;
+    color: var(--clr_accent);
+    transition: var(--clr_dark) .4s ease;
 }
 .socials a i:hover {
-    color: #99D930;
+    color: var(--clr_accent);
 }
 /* Media Queries */
 
@@ -378,8 +396,8 @@ footer {
         order: -1;
     }
     .nav_bar_interactive_clr {
-        background: #99D930;
-        color: #000000;
+        background: var(--clr_accent);
+        color: var(--clr_dark);
     }
     .nav_bar {
         font-size: 2rem;
@@ -394,7 +412,7 @@ footer {
 
     }
     .nav_bar {
-        background: #303030;
+        background: var(--clr_dark_dark);
     }
     .github_header {
         margin: 1.5em 0;

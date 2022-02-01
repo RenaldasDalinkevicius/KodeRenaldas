@@ -104,15 +104,9 @@ window.addEventListener("scroll", scrollHandler)
 /* Hide and show navbar */
 
 function responsiveNavBar() {
-  nav_bar_interactive_clr.classList.add("nav_bar_interactive_clr")
   for (let i = 0; i< nav_bar_list.length; i++) {
-    if (nav_bar_list[i].className==="nav_bar_list hide_navbar") {
-      nav_bar_list[i].classList.remove("hide_navbar")
-    }
-    else {
-      nav_bar_list[i].classList.add("hide_navbar")
-      nav_bar_interactive_clr.classList.remove("nav_bar_interactive_clr")
-    }
+      nav_bar_list[i].classList.toggle("hide_navbar")
+      nav_bar_interactive_clr.classList.toggle("nav_bar_interactive_clr")
   }
 }
 /////////////////////////////////////////////////////////////////
