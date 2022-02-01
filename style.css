@@ -298,7 +298,7 @@ footer {
     position: absolute;
     background: #111;
     height: auto;
-    width: 100vw;
+    width: 100%;
     color: #fff;
     padding: 2em 0;
 }
