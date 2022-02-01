@@ -1,6 +1,12 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --num_python: 59;
+    --num_html: 82;
+    --num_css: 79;
+    --num_javascript: 63;
+}
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
@@ -71,6 +77,14 @@ main {
     background-color: #99D930;
     color: #000000;
     text-decoration: none;
+    transition: transform 200ms ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+:focus {
+    outline: 3px solid #99D930;
+    outline-offset: 3px;
 }
 /* Navigaiton */
 
@@ -166,7 +180,7 @@ nav li a {
     margin-right: 1em;
 }
 .section_text {
-    margin-right: 2em;
+    margin-right: 1em;
 }
 .inverse {
     /*background: #252525;*/
@@ -301,6 +315,7 @@ footer {
     width: 100%;
     color: #fff;
     padding: 2em 0;
+    overflow-y: hidden;
 }
 .footer_content {
     display: flex;
@@ -443,6 +458,17 @@ footer {
     .cv_grid h2 {
         text-align: center;
     }
+    .github_section {
+        flex-direction: column;
+    }
+    .section_text {
+        margin: 0 1em;
+    }
+    .btn {
+        width: 80%;
+        margin: 1em auto;
+        
+    }
 }
 @media (max-width:300px) {
     .cv_language > div {
@@ -457,17 +483,10 @@ footer {
         font-size: 2.5rem;
     }
     .footer_content h3 {
-        letter-spacing: 0.5rem;
+        letter-spacing: 0.25rem;
     }
 }
 /* % Fade in % */
-
-:root {
-    --num_python: 59;
-    --num_html: 82;
-    --num_css: 79;
-    --num_javascript: 63;
-}
 
 /* fade in HTML */
 @property --num_html {
